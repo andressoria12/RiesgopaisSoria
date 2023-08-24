@@ -23,7 +23,7 @@ Puntos_riesgo_país <-
 # Creación de tema
 
 theme_article_rp <-
-  theme_classic(base_size = 12) +
+  theme_classic(base_size = 15) +
   theme(panel.grid = element_blank(),
         axis.text.y = element_blank(),
         plot.title = element_text(color = "grey20"),
@@ -93,13 +93,13 @@ grafico_riesgo <-
        y = 'Puntos base (1 = 0.01%)',
        title = 'Riesgo país Ecuador 2019-2023',
        subtitle = 'Puntos base mensuales de los bonos soberanos sobre la tasa libre de riesgo',
-       caption = str_wrap(caption_grafico_rp,220)) +
+       caption = str_wrap(caption_grafico_rp,150)) +
   theme_article_rp +
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5),
-        axis.text.y = element_text(size = 8),
+        axis.text.y = element_text(size = 12),
         plot.title = element_text(face = 'bold'),
         plot.subtitle = element_text(size = 12),
-        plot.caption = element_text(size = 8, hjust = 0, face = 'italic'),
+        plot.caption = element_text(size = 12, hjust = 0, face = 'italic'),
         plot.title.position = 'plot',
         plot.caption.position = 'plot')+
   annotate('rect', xmin = zona_xmin, xmax = zona_xmax, ymin = zona_ymin, ymax = zona_ymax,
@@ -123,7 +123,7 @@ ggsave(filename = "Figures/grafico_riesgo_pais.png",
        plot = grafico_riesgo, 
        width = 12, 
        height = 8, 
-       dpi = 1200)
+       dpi = 900)
 
 
 

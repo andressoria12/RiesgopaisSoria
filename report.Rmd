@@ -15,10 +15,10 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
 ```
 
 # El latido de una economía
-En la antigüedad el ser humano luchaba por la supervivencia y la preservación de su especie enfrentando múltiples riesgos en su entorno. En contraste, hoy en día con sistemas globales interconectados, ¿contra qué objeto lucha el ser humano de un país como el Ecuador? ¿Cuál es una de las amenazas inminentes, pero poco percibidas para los ecuatorianos?
-La respuesta no es una sola, ya que existen varias conflictivas, como corrupción, inestabilidad política y económica, entre otras. Sin embargo, hay un objeto que suele pasar desapercibido, quizás por ser algo complicado de entender: el riesgo país o country risk premium. 
 
-Este indicador económico pareciera ser nada más que una clase de calificación para evaluar a un país en términos de inversión, no obstante, no se suele dimensionar bien cómo esa puntuación influye a todo el marco económico. Sin embargo, en medio de estas reflexiones, a menudo escuchamos voces que sostienen que el riesgo país es algo que no tiene efectos tangibles en la vida cotidiana de la ciudadanía. Pero esta es una suposición errada, una percepción que subestima la verdadera influencia que tiene el indicador. 
+En la antigüedad el ser humano luchaba por la supervivencia y la preservación de su especie enfrentando múltiples riesgos en su entorno. En contraste, hoy en día con sistemas globales interconectados, ¿contra qué objeto lucha el ser humano de un país como el Ecuador? ¿Cuál es una de las amenazas inminentes, pero poco percibidas para los ecuatorianos?
+
+La respuesta no es una sola, ya que existen varias conflictivas, como corrupción, inestabilidad política y económica, entre otras. Sin embargo, hay un objeto que suele pasar desapercibido, quizás por ser algo complicado de entender: el riesgo país o country risk premium. Este indicador económico pareciera ser nada más que una clase de calificación para evaluar a un país en términos de inversión, no obstante, no se suele dimensionar bien cómo esa puntuación influye a todo el marco económico. Sin embargo, en medio de estas reflexiones, a menudo escuchamos voces que sostienen que el riesgo país es algo que no tiene efectos tangibles en la vida cotidiana de la ciudadanía. Pero esta es una suposición errada, una percepción que subestima la verdadera influencia que tiene el indicador. 
 
 El riesgo país es un ente vivo y dinámico que interactúa con todos los niveles de la economía, y que puede ser el viento que impulse o la tempestad que hunde nuestra economía. A continuación, abordaremos la definición del riesgo país y lo que implica para los ecuatorianos. 
 
