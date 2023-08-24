@@ -13,6 +13,10 @@ library(stringr)
 
 # Importar base
 
+#url <- "https://github.com/laboratoriolide/datos-bce/blob/f1616b8b8b31b1bfb52b00258ffd896d90dde11c/Data/Puntos%20riesgo%20pa%C3%ADs.xlsx"
+
+#download.file(url, here("Data/Puntos riesgo país.xlsx"))
+
 Puntos_riesgo_país <- 
   read_excel("Data/Puntos riesgo país.xlsx")
 
@@ -28,21 +32,20 @@ theme_article_rp <-
 
 # Análisis ------------------------------------------------------------------------------------------------
 
-# Creación de vectores manipulables
-
-periodo <- 
-  as.Date(c("1/1/2019", "1/2/2019", "1/3/2019", "1/4/2019", "1/5/2019", "1/6/2019", "1/7/2019", "1/8/2019", "1/9/2019", "1/10/2019", "1/11/2019", "1/12/2019", "1/1/2020", "1/2/2020", "1/3/2020", "1/4/2020", "1/5/2020", "1/6/2020", "1/7/2020", "1/8/2020", "1/9/2020", "1/10/2020", "1/11/2020", "1/12/2020", "1/1/2021", "1/2/2021", "1/3/2021", "1/4/2021", "1/5/2021", "1/6/2021", "1/7/2021", "1/8/2021", "1/9/2021", "1/10/2021", "1/11/2021", "1/12/2021", "1/1/2022", "1/2/2022", "1/3/2022", "1/4/2022", "1/5/2022", "1/6/2022", "1/7/2022", "1/8/2022", "1/9/2022", "1/10/2022", "1/11/2022", "1/12/2022", "1/1/2023", "1/2/2023", "1/3/2023", "1/4/2023", "1/5/2023", "1/6/2023"), format = "%d/%m/%Y")
-
-puntos_base <- 
-  c(690, 584, 592, 560, 619, 580, 603, 705, 677, 789, 1146, 826, 1018, 1466, 4553, 5129, 3907, 3373, 2755, 2813, 1015, 1029, 1065, 1062, 1273, 1226, 1201, 764, 730, 776, 790, 751, 835, 847, 891, 869, 768, 755, 810, 816, 802, 1165, 1336, 1550, 1753, 1570, 1333, 1250, 1216, 1765, 1917, 1757, 1911, 1922)
-
 # Dataframe de variables
 data <- 
   data.frame(Periodo = periodo, 
              Puntos.base = puntos_base)
 
-# Convertir a formato fecha
+# Convertir la columna 'Periodo' a tipo Date
 data$Periodo <- as.Date(data$Periodo, format = "%d/%m/%Y")
+
+# Filtrar el data frame por las fechas deseadas
+filtered_data <- data[data$Periodo >= as.Date("2019-01-01", format="%Y-%m-%d") & data$Periodo <= as.Date("2023-06-01", format="%Y-%m-%d"),]
+
+# Crear los vectores a partir de los datos filtrados
+periodo <- filtered_data$Periodo
+puntos_base <- filtered_data$Puntos_base
 
 # Secuencia de meses 
 
