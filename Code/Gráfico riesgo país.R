@@ -5,20 +5,19 @@
 # Preliminares --------------------------------------------------------------------------------------------
 
 # Cargar librerías
-
-library(readxl)
+library(readr)
 library(ggplot2)
 library(lubridate)
 library(stringr)
+library(here)
 
 # Importar base
 
-#url <- "https://github.com/laboratoriolide/datos-bce/blob/f1616b8b8b31b1bfb52b00258ffd896d90dde11c/Data/Puntos%20riesgo%20pa%C3%ADs.xlsx"
+url <- "https://raw.githubusercontent.com/laboratoriolide/datos-bce/main/Data/Puntos%20riesgo%20pa%C3%ADs.csv?token=GHSAT0AAAAAACEAPIXYTARMEFDLGL2BTH2MZHI4AMA"
 
-#download.file(url, here("Data/Puntos riesgo país.xlsx"))
+download.file(url, here("Data/Puntos riesgo país.csv"))
 
-Puntos_riesgo_país <- 
-  read_excel("Data/Puntos riesgo país.xlsx")
+Puntos_riesgo_país <- read.delim("Data/Puntos riesgo país.csv", sep = ";", header = TRUE)
 
 # Creación de tema
 

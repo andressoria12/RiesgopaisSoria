@@ -2,6 +2,13 @@
 library(shiny)
 library(highcharter)
 library(readxl)
+library(here)
+library(readr)
+# Importar base
+
+url <- "https://raw.githubusercontent.com/laboratoriolide/datos-bce/main/Data/Puntos%20riesgo%20pa%C3%ADs.csv?token=GHSAT0AAAAAACEAPIXYTARMEFDLGL2BTH2MZHI4AMA"
+
+download.file(url, here("Data/Puntos riesgo país.csv"))
 
 # Definimos la UI para la aplicación
 ui <- fluidPage(
@@ -29,7 +36,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   # Leemos los datos
   data <- reactive({
-    df <- read_excel("Data/Puntos riesgo país.xlsx")
+    df <- read.delim("Data/Puntos riesgo país.csv", sep = ";", header = TRUE)
     df$Periodo <- as.Date(df$Periodo, format = "%d/%m/%Y")
     df
   })
@@ -60,4 +67,5 @@ server <- function(input, output) {
 
 # Ejecutamos la aplicación 
 shinyApp(ui = ui, server = server)
+
 
