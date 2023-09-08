@@ -6,7 +6,7 @@ library(here)
 library(readr)
 # Importar base
 
-url <- "https://raw.githubusercontent.com/laboratoriolide/datos-bce/main/Data/Puntos%20riesgo%20pa%C3%ADs.csv?token=GHSAT0AAAAAACEAPIXYTARMEFDLGL2BTH2MZHI4AMA"
+url <- "https://raw.githubusercontent.com/laboratoriolide/datos-bce/main/Data/Puntos%20riesgo%20pa%C3%ADs.csv"
 
 download.file(url, here("Data/Puntos riesgo país.csv"))
 
